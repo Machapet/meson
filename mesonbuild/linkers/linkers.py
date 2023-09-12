@@ -501,6 +501,9 @@ class C2000Linker(TILinker):
     # Required for backwards compat with projects created before ti-cgt support existed
     id = 'ar2000'
 
+class C6000Linker(TILinker):
+    id = 'ar6000'
+
 
 class AIXArLinker(ArLikeLinker, StaticLinker):
     id = 'aixar'
@@ -1098,6 +1101,9 @@ class TIDynamicLinker(DynamicLinker):
 class C2000DynamicLinker(TIDynamicLinker):
     # Required for backwards compat with projects created before ti-cgt support existed
     id = 'cl2000'
+
+class C6000DynamicLinker(TIDynamicLinker):
+    id = 'cl6000'
 
 
 class ArmDynamicLinker(PosixDynamicLinkerMixin, DynamicLinker):
