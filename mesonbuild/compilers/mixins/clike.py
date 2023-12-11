@@ -1065,7 +1065,7 @@ class CLikeCompiler(Compiler):
         elif env.machines[self.for_machine].is_cygwin():
             shlibext = ['dll', 'dll.a']
             prefixes = ['cyg'] + prefixes
-        elif self.id.lower() == 'c6000':
+        elif self.id.lower() == 'c6000' or self.id.lower() == 'ti':
             # TI C6000 compiler can use both extensions for static or dynamic libs.
             stlibext = ['a', 'lib']
             shlibext = ['dll', 'so']
